@@ -1,0 +1,208 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #260e04;
+	color: #c97b63;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.search {
+	display: inline-flex;
+}
+
+.search-input {
+	font-size: 15px;
+	width: 300px;
+	padding: 10px;
+	border-radius: 10px 0px 0px 10px;
+	border: none;
+	outline: none;
+}
+
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+	display: none;
+}
+
+.search-icon {
+	font-size: 15px;
+	padding: 10px 15px;
+	border-radius: 0px 10px 10px 0px;
+	border: none;
+	outline: none;
+	background-color: white;
+}
+
+.random-icon {
+	font-size: 15px;
+	padding: 10px;
+	border-radius: 10px 10px 10px 10px;
+	border: none;
+	outline: none;
+	margin-left: 10px;
+	background-color: white;
+}
+
+.search-icon:hover,
+.random-icon:hover {
+	cursor: pointer;
+}
+
+.searchResult {
+	font-size: 20px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 20px;
+	text-align: center;
+}
+
+.searchResult-images {
+	max-width: 900px;
+	list-style-type: none;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 0px 20px;
+}
+
+.list-image img {
+	width: 100%;
+
+	border: 5px solid white;
+	border-radius: 3px;
+}
+
+.list-image {
+	position: relative;
+	background-color: transparent;
+	margin: 20px;
+}
+
+.imageSpan {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	transition: opacity 200ms ease-in;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	padding: 10px;
+}
+
+.imageSpan:hover {
+	opacity: 1;
+}
+
+.list-image:hover {
+	cursor: pointer;
+}
+
+.meal-description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px 20vw;
+	display: none;
+}
+
+.meal-name {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #c97b63;
+}
+
+.img {
+	text-align: center;
+}
+
+.meal-image {
+	width: 250px;
+	border: 5px solid white;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.meal-keyword {
+	font-size: 17px;
+	border: 2px solid;
+	margin: 50px;
+	padding: 15px 150px;
+	text-align: center;
+}
+
+.meal-recipe {
+	margin: 0px 5vw;
+	text-align: center;
+}
+
+.meal-ingredient {
+	margin: 20px;
+	text-align: center;
+}
+
+.ingredients {
+	font-size: 25px;
+}
+
+.ingredientList {
+	list-style: none;
+	padding: 0px;
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0px;
+	text-align: center;
+}
+
+.ingredientItem {
+	padding: 5px 10px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 2px;
+	color: black;
+	font-size: 13px;
+	line-height: 100%;
+}
+
+@media (max-width: 800px) {
+	.searchResult-images {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.searchResult-images {
+		grid-template-columns: 1fr 1fr;
+	}
+	.list-image img {
+		width: 180px;
+		margin: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	.searchResult-images {
+		grid-template-columns: 1fr;
+	}
+	.list-image img {
+		width: 250px;
+		margin: 10px;
+	}
+}
