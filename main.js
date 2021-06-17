@@ -76,7 +76,6 @@ randomBtn.addEventListener("click", async () => {
   searchResult.style.display = 'none';
   searchResultList.style.display = 'none';
   const mealInfoArray = await fetchRandomMeal();
-  console.log(mealInfoArray);
   await displayMeal(mealInfoArray);
 })
 
@@ -101,14 +100,3 @@ searchBox.addEventListener('keypress', (e) => {
     mealDescription.style.display = 'none';
   }
 })
-
-
-/* 진짜 api 불러오는거 좆같다 ㅡ.,ㅡ 존나 어려움
-진짜 코드가 개 드럽겠ㅈㅣ만 일단 해냈다는데에 의미를 두고
-진짜 며칠을 고생한거야 이것땜에!!!!
-그래도 끝나니까 속이 후우우우련하다
-토할거같았는데 진짜 포기할뻔했지만
-그래도 강의 조금씩 컨닝하면서 하니까 해내긴 햇네^^;;
-휴 수고했다 유윤정
-다음 미션은 또 어떤걸까,,,좆같은 코딩새끼,,,
-재밌는데 빡쳐,,,아오,,,,,,,,*/
